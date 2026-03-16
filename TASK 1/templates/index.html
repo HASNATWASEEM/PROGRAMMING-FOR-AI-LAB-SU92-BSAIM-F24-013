@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Email Finder</title>
+</head>
+
+<body>
+
+    <h2>Website Email Finder</h2>
+
+    <form method="POST">
+        <input type="text" name="site_url" placeholder="Enter website link here" required>
+        <button type="submit">Find Emails</button>
+    </form>
+
+    <h3>Discovered Emails:</h3>
+
+    <ul>
+        {% for mail in emails %}
+        <li>{{ mail }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>
